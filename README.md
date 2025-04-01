@@ -2,14 +2,12 @@
 Meu primeiro projeto de web 1 
 
 
-O primeiro projeto de web 1 da primeira unidade:
+-Projeto Web 1 - E-commerce(HTML)
 
--Projeto Web 1 - E-commerce (HTML) 2024.1
 Este projeto tem como objetivo criar a estrutura HTML de um sistema básico de e-commerce, permitindo a prática dos conceitos de navegação, organização de conteúdo e estruturação de páginas. O design será tratado em uma fase posterior, com CSS.  
   Organização do Projeto
 O projeto consiste em um conjunto de páginas HTML interligadas, formando um sistema de compras online. Nesta fase, não há necessidade de validação de campos ou implementação de funcionalidades dinâmicas.
 
-A contunuidade do projeto de web 1 na segunda unidade tinhas as seguintes regras:
 Projeto Web 1 - CSS (Continuação do HTML)
 Agora, o objetivo é aplicar CSS para definir o estilo visual do site, garantindo uma identidade visual consistente e melhorando a usabilidade.
 
