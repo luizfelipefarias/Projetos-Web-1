@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=New+Amsterdam&display=swap');
+
+@font-face {
+    font-family: 'sansjp';
+    src: url(fontes/Noto_Sans_JP/NotoSansJP-VariableFont_wght.ttf);
+}
+
+h3 {
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+}
+
+P {
+
+    font-family: "sansjp";
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #F9C2C2;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; 
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #00A3E0;
+    color: #020202;
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    zoom: 70%;
+}
+
+header h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+header img {
+    width: 80px;
+    height: 80px;
+    margin: 10px auto;
+    border-radius: 50%;
+}
+
+nav {
+    background-color: #A8D5A2;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 14px;
+}
+
+nav a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #333;
+}
+
+main {
+    padding: 80px 20px 20px; 
+}
+
+.cart-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product {
+    background-color: #f5f5dc;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    max-width: 300px; 
+} 
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+#box img{
+    height: 72%;
+    position: relative;
+}
+.product h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.product .price {
+    color: #00796b;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.product label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.product input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+}
+
+.checkout-form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.checkout-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+#spiderman img{
+    width: 100%;
+    height: 60%;
+
+}
+
+.checkout-form input[type="submit"] {
+    background-color: #00796b;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.checkout-form input[type="submit"]:hover {
+    background-color: #004d40;
+}

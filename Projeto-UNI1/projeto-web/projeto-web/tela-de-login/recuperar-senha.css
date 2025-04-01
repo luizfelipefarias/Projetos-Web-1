@@ -1,0 +1,143 @@
+:root {
+  --primary-color: #00A3E0;
+  --secondary-color: #00A3E0;
+  --background-color: #F9C2C2;
+  --form-background-color: #A8D5A2;
+  --text-color: #fff;
+  --border-color: #A8D5A2;
+  --shadow-color: #FF6F61;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=New+Amsterdam&display=swap');
+
+@font-face {
+  font-family: 'sansjp';
+  src: url(fontes/Noto_Sans_JP/NotoSansJP-VariableFont_wght.ttf);
+}
+
+h3 {
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+}
+
+label {
+
+  font-family: "sansjp";
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+}
+
+header {
+  background-color: var(--secondary-color);
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  zoom: 80%;
+}
+
+#voltar {
+  position: relative;
+  right: 40%;
+}
+
+#img {
+  right: 2%;
+  position: relative;
+}
+
+header img {
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+  border-radius: 50%;
+  padding: auto;
+  right: 2%;
+  position: relative;
+  padding: 10px;
+  overflow: clip;
+  overflow-clip-margin: content-box;
+  box-shadow: 0px 0px 14px #0480ad;
+}
+
+img:hover {
+  background-color: #FF6F61;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+section {
+  background-color: var(--form-background-color);
+  padding: 30px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 0 10px var(--shadow-color);
+  border-radius: 10px;
+  width: 80%;
+  margin: 20px auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section:hover {
+  background-color: #E0E0E0;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input[type="email"] {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #00A3E0;
+}
+
+.btn-1 {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #E0E0E0;
+}
+
+.btn-1:hover {
+  background-color: #00A3E0;
+}
+
+
+.btn:hover {
+  background-color: #00a4e06e;
+}

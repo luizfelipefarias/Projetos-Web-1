@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=New+Amsterdam&display=swap');
+
+@font-face {
+    font-family: 'sansjp';
+    src: url(fontes/Noto_Sans_JP/NotoSansJP-VariableFont_wght.ttf);
+}
+
+h2 {
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+}
+
+label {
+
+    font-family: "sansjp";
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    background-color: #F9C2C2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login {
+    background-color: #A8D5A2;
+    position: relative;
+    left: 50%;
+    color: rgb(0, 0, 0);
+    height: 100%;
+    padding-left: 200px;
+    justify-items: auto;
+    box-shadow: 0px 0px 14px #FF6F61;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 30px;
+    border-top: 1px solid #ddd;
+
+}
+
+
+input {
+    padding: 6px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+    display: block;
+    width: 40%;
+}
+
+button {
+    background-color: #00A3E0;
+    color: white;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 10%;
+}
+
+a {
+    color: #00A3E0;
+}
+
+.logo {
+    border-radius: 30px;
+    padding: 10px;
+    position: absolute;
+    right: 80%;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0px 0px 14px #FF6F61;
+}
+
+.head {
+    align-items: center;
+    left: 24%;
+    top: 20%;
+    right: 10%;
+    position: absolute;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    border: none;
+
+
+}
+
+button:hover {
+    background-color: #00a4e06e;
+}
+
+.login:hover {
+    background-color: #E0E0E0;
+}
+
+.logo:hover {
+    background-color: #FF6F61;
+}

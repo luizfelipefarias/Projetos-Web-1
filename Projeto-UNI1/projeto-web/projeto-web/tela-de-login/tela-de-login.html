@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tela-de-login.css">
+    <link rel="icon" type="image/png" href="imagens/logo.png">
+    <title>Pagina Inicial</title>
+</head>
+
+<body>
+
+    <div class="head">
+        <img src="imagens/logo.png" alt="logo do site" class="logo">
+
+    </div>
+
+    <form id="login-form" action="../tela-inicial/pagina-loja.html">
+
+        <div class="login"><br><br><br><br>
+            <h2>Login</h2><br>
+            <label for="email">Email:</label><br><br>
+            <input type="email" id="email" placeholder="Digite seu email"><br><br>
+            <label for="password">Senha:</label><br><br>
+            <input type="password" id="password" placeholder="********"><br>
+            <div id="error-messagem"></div><br><br>
+            <a href="recuperar-senha.html">Redefinir senha</a><br>
+            <a href="criar-conta.html">Criar conta</a><br><br>
+            <button id="entrar-btn">Entrar</button>
+        </div>
+    </form>
+
+    <script>
+        const form = document.getElementById('login-form');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const errorMessagem = document.getElementById('error-messagem');
+        const entrarBtn = document.getElementById('entrar-btn');
+    
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            validateForm();
+        });
+    
+        entrarBtn.addEventListener('click', validateForm);
+    
+        function validateForm() {
+            const emailValue = emailInput.value.trim();
+            const passwordValue = passwordInput.value.trim();
+    
+            if (emailValue === '' || passwordValue === '') {
+                errorMessagem.textContent = 'Por favor, preencha os campos de email e senha!';
+                return;
+            }
+    
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailRegex.test(emailValue)) {
+                errorMessagem.textContent = 'Por favor, insira um email válido!';
+                return;
+            }
+    
+            const regexSenha = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            if (!regexSenha.test(passwordValue)) { 
+                errorMessagem.textContent = 'Por favor, insira uma senha válida!';
+                return;
+            }
+    
+            form.submit(); 
+        }
+    </script>
+</body>
+
+</html>

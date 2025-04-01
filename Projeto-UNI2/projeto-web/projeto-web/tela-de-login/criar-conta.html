@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="criar-conta.css">
+    <link rel="website icon" type="png" href="imagens/logo.png">
+    <title>Pagina de cadastro</title>
+</head>
+
+<body>
+    <div>
+        <header>
+            <a href="tela-de-login.html" id="voltar"><button type="button" class="voltar">Voltar</button></a>
+            <a href="tela-de-login.html" id="img"><img src="imagens/logo.png" alt="Logotipo" height="150"></a>
+        </header>
+    </div>
+    <br><br>
+    <main>
+        <div class="cadastro">
+            <form action="tela-de-login.html" id="cadastro-form">
+                <h1>マンガヘブン</h1>
+                <h3>MangaHaven</h3><br>
+                <label for="name">Nome:</label>
+                <input type="text" id="name">
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" id="sobrenome">
+                <label for="email">Email:</label>
+                <input type="email" id="email">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha">
+                <label for="obs">Observarções:</label>
+                <textarea name="obs" id="obs"></textarea><br>
+                <label for="idade">Idade:</label>
+                <input type="date" id="idade">
+                <label for="gender">Genero:</label>
+                <select name="gender" id="genero">
+                    <option value="">Selecione</option>
+                    <option value="M">Masculino</option>
+                    <option value="F">Feminino</option>
+                </select><br><br>
+                <button type="button" onclick="validar('')">Cadastrar</button><br><br>
+                <button type="reset">Reiniciar</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        function validar() {
+            const nome = document.getElementById('name').value;
+            const sobrenome = document.getElementById('sobrenome').value;
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+            const dataNascimento = document.getElementById('idade').value;
+            const genero = document.getElementById('genero').value;
+
+            if (nome === '') {
+                alert('Por favor, preencha o campo nome');
+                return;
+            }
+
+            if (sobrenome === '') {
+                alert('Por favor, preencha o campo sobrenome');
+                return;
+            }
+
+            if (email === '') {
+                alert('Por favor, preencha o campo email');
+                return;
+            }
+
+            if (senha === '') {
+                alert('Por favor, preencha o campo senha');
+                return;
+            }
+
+            if (dataNascimento === '') {
+                alert('Por favor, preencha o campo data de nascimento');
+                return;
+            }
+
+            if (genero === '') {
+                alert('Por favor, selecione um gênero');
+                return;
+            }
+
+            const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!regexEmail.test(email)) {
+                alert('Por favor, insira um email válido');
+                return;
+            }
+
+            const regexSenha = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            if (!regexSenha.test(senha)) {
+                alert('Por favor, insira uma senha válida (mínimo 8 caracteres, com letra maiúscula, minúscula, número e caractere especial)');
+                return;
+            }
+
+            const dataAtual = new Date();
+            const dataNascimentoFormatada = new Date(dataNascimento);
+            let idade = dataAtual.getFullYear() - dataNascimentoFormatada.getFullYear();
+
+            if (dataAtual.getMonth() < dataNascimentoFormatada.getMonth() || (dataAtual.getMonth() === dataNascimentoFormatada.getMonth() && dataAtual.getDate() < dataNascimentoFormatada.getDate())) {
+                idade--;
+            }
+
+            if (idade < 18) {
+                alert('Você precisa ter mais de 18 anos para se cadastrar');
+                return;
+            }
+
+            alert('Cadastrado com sucesso!!')
+            document.getElementById('cadastro-form').submit();
+        }
+    </script>
+</body>
+
+</html>

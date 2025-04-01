@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="recuperar-senha.css">
+    <link rel="website icon" type="png" href="imagens/logo.png">
+    <title>Recuperar Senha</title>
+
+</head>
+
+<body>
+    <div>
+        <header>
+            <a href="tela-de-login.html" id="voltar"><button type="button" class="btn-1">Voltar</button></a>
+            <a href="tela-de-login.html" id="img"><img src="imagens/logo.png" alt="Logotipo" height="150"></a>
+        </header>
+    </div>
+
+    <main>
+        <section>
+            <h1>マンガヘブン</h1>
+            <h2>MangaHaven</h2><br>
+            <form action="tela-de-login.html" id="recover-form">
+                <label for="gmail">E-mail:</label>
+                <input type="email" name="Recuperar" id="gmail">
+                <button type="button" class="btn" onclick="enviarEmail()">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        function enviarEmail() {
+            const form = document.getElementById('recover-form');
+            const emailInput = document.getElementById('gmail');
+            const emailValue = emailInput.value.trim();
+
+            if (!emailValue) {
+                alert('Por favor, insira um e-mail.');
+                return;
+            }
+
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailRegex.test(emailValue)) {
+                alert('O e-mail inserido não é válido. Por favor, verifique se o e-mail está no formato correto (ex: exemplo@dominio.com).');
+                return;
+            }
+
+            alert('E-mail enviado com sucesso!');
+            form.submit(); 
+        }
+    </script>
+</body>
+
+</html>

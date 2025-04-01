@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sobre-site.css">
+    <link rel="icon" type="image/png" href="imagens/logo.png">
+    <title>Página Principal</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Bem-vindo à Manga Haven</h1>
+            <a href="pagina-principal.html"><img src="imagens/logo.png" alt="logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="pagina-principal.html">Home</a></li>
+                    <button id="onclick" onclick="validar('Você já se encontra nessapagina!!')">
+                        <li><a href="#">Sobre</a>
+                    </button></li>
+                    <li><a href="../tela-de-login/tela-de-login.html">Sair</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <main>
+        <section class="categorias">
+            <div class="container">
+                <h2>Sobre o Site</h2>
+                <div class="grid-categorias">
+                    <div class="item-categoria">
+                       <h1>Paletas</h1><br>
+                        <img src="imagens/paleta-cores.png" alt="paleta-cores" id="pal"><br>
+                        <a href="sobre-site.html">Voltar</a>
+                    </div>
+                </div>
+            </div>
+    </main>
+    </section>
+    <br><br><br><br><br><br><br><br><br><br>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Manga Haven</p>
+        </div>
+    </footer>
+
+    <script>
+        function validar() {
+            alert('Você já está nessa pagina!!')
+        }
+
+    </script>
+</body>
+
+</html>

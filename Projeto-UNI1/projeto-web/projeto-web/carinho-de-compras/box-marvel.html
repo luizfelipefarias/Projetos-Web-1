@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho</title>
+    <link rel="website icon" type="png" href="imagens/logo.png">
+    <link rel="stylesheet" href="carinho.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Bem-vindo à Manga Haven</h1>
+            <a href="../tela-inicial/pagina-principal.html">
+                <img src="imagens/logo.png" alt="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="../tela-inicial/pagina-principal.html">Home</a></li>
+                    <li><a href="../tela-inicial/sobre-site.html">Sobre</a></li>
+                    <li><a href="../tela-de-login/tela-de-login.html">Sair</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<br><br><br><br>
+    <main>
+        <h1 class="cart-title">Carrinho de Compras</h1>
+        <section class="products">
+            <div class="product">
+                <a href="../sobre-produtos/coringa.html">
+                    <img src="imagens/produtos/coringa-submundo.jpg" alt="Coringa Submundo">
+                </a>
+                <h3>Coringa Submundo</h3>
+                <p class="price">R$46,00</p>
+                <label for="quantity-1">Quantidade:</label>
+                <input type="number" id="quantity-1" class="quantity" min="0" value="0">
+            </div>
+            <div class="product">
+                <a href="../sobre-produtos/box-dc.html" id="box">
+                    <img src="imagens/produtos/box-dc-coringa.jpg" alt="box dc" id="box">
+                </a>
+                <h3>Coleção DC Comics</h3>
+                <p class="price">R$ 120,90</p>
+                <label for="quantity-2">Quantidade:</label>
+                <input type="number" id="quantity-2" class="quantity" min="0" value="0">
+            </div>
+            <div class="product">
+                <a href="../sobre-produtos/superman.html" id="box">
+                    <img src="imagens/produtos/superman.jpg" alt="superman" id="box">
+                </a>
+                <h3>Superman</h3>
+                <p class="price">R$ 8,00</p>
+                <label for="quantity-3">Quantidade:</label>
+                <input type="number" id="quantity-3" class="quantity" min="0" value="0">
+            </div>
+        </section>
+    </main>
+<main>
+<section class="products">
+     <div class="product">
+            <a href="../sobre-produtos/jujutsukaisen.html">
+                <img src="imagens/produtos/jujutsukaisen.jpg" alt="Jujutsu Kaisen, Vol. 1">
+            </a>
+            <h3>Jujutsu Kaisen, Vol. 1</h3>
+            <p class="price">R$29,90</p>
+            <label for="quantity-1">Quantidade:</label>
+            <input type="number" id="quantity-1" class="quantity" min="0" value="0">
+     </div>
+    <div class="product">
+            <a href="../sobre-produtos/onepiece.html">
+                <img src="imagens/produtos/onepiece.png" alt="One Piece Vol. 4">
+            </a>
+            <h3>One Piece Vol. 4</h3>
+            <p class="price">R$29,67</p>
+            <label for="quantity-2">Quantidade:</label>
+            <input type="number" id="quantity-2" class="quantity" min="0" value="0">
+        </div>
+        <div class="product">
+            <a href="../sobre-produtos/sayonara.html" id='box'>
+                <img src="imagens/produtos/sayonara.jpg" alt="Sayonara Futebol vol.2"id=box>
+            </a>
+            <h3>Sayonara Futebol vol.2</h3>
+            <p class="price">R$34,90</p>
+            <label for="quantity-3">Quantidade:</label>
+            <input type="number" id="quantity-3" class="quantity" min="0" value="0">
+        </div>
+    </section>
+</main>
+
+
+<main>
+    <section class="products">
+        <div class="product">
+            <a href="../sobre-produtos/homem-ferro.html">
+                <img src="imagens/produtos/homem-de-ferro.jpg" alt="Homem de Ferro Superior: Nova Marvel Deluxe">
+            </a>
+            <h3>Homem de Ferro Superior: Nova Marvel Deluxe</h3>
+            <p class="price">R$80,99</p>
+            <label for="quantity-1">Quantidade:</label>
+            <input type="number" id="quantity-1" class="quantity" min="0" value="0">
+        </div>
+        <div class="product">
+            <a href="../sobre-produtos/box-marvel.html">
+                <img src="imagens/produtos/box-marvel.jpg" alt="Box Marvel Guerra Civil: Guerras secretas">
+            </a>
+            <h3>Box Marvel Guerra Civil: Guerras secretas</h3>
+            <p class="price">R$47,98</p>
+            <label for="quantity-2">Quantidade:</label>
+            <input type="number" id="quantity-2" class="quantity" min="0" value="1">
+        </div>
+        <div class="product" id="spiderman">
+            <a href="../sobre-produtos/homem-aranha.html">
+                <img src="imagens/produtos/spiderman.jpg" alt="O Espetacular Homem-Aranha - 35">
+            </a><br>
+            <h3>O Espetacular Homem-Aranha - 35</h3>
+            <p class="price">R$20,00</p>
+            <label for="quantity-3">Quantidade:</label>
+            <input type="number" id="quantity-3" class="quantity" min="0" value="0">
+        </div>
+    </section>
+
+    <form action="finalizar-compra.html" class="checkout-form">
+        <label for="finalizar">Aperte para finalizar sua compra</label><br>
+        <input type="submit" value="Finalizar" id="finalizar">
+    </form>
+    </main>
+</body>
+
+</html>

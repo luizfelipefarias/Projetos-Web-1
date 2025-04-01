@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="finalizar-compra.css">
+    <link rel="website icon" type="png" href="imagens/logo.png">
+    <title>Finalizar Compra</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Bem-vindo à Manga Haven</h1>
+            <a href="../tela-inicial/pagina-principal.html">
+                <img src="imagens/logo.png" alt="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="../tela-inicial/pagina-principal.html">Home</a></li>
+                    <li><a href="../tela-inicial/sobre-site.html">Sobre</a></li>
+                    <li><a href="../tela-de-login/tela-de-login.html">Sair</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <br><br><br><br>
+
+    <main>
+        <div class="container-finalizar">
+            <h2>Finalizar Compra</h2><br>
+
+            <h3>Endereço de Entrega</h3><br>
+            <form id="recover-form" action="../projeto-web/tela-inicial/pagina-principal.html">
+                <div>
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome">
+                </div>
+
+                <div>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div>
+                    <label for="telefone">Telefone:</label><br>
+                    <input type="tel" id="telefone" name="telefone">
+                </div>
+
+                <div>
+                    <label for="cep">CEP:</label><br>
+                    <input type="number" id="cep" name="cep">
+                </div>
+
+                <div>
+                    <label for="endereco">Endereço:</label><br>
+                    <input type="text" id="endereco" name="endereco">
+                </div>
+
+                <div>
+                    <label for="numero">Número:</label><br>
+                    <input type="number" id="numero" name="numero">
+                </div>
+
+                <div>
+                    <label for="complemento">Complemento (opcional):</label><br>
+                    <input type="text" id="complemento" name="complemento">
+                </div>
+
+                <div>
+                    <label for="bairro">Bairro:</label><br>
+                    <input type="text" id="bairro" name="bairro">
+                </div>
+
+                <div>
+                    <label for="cidade">Cidade:</label><br>
+                    <input type="text" id="cidade" name="cidade">
+                </div>
+
+                <div>
+                    <label for="estado">Estado:</label>
+                    <select id="estado" name="estado">
+                        <option value="">Selecione</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select><br>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Manga Haven</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('recover-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const nomeValue = document.getElementById('nome').value.trim();
+            const emailValue = document.getElementById('email').value.trim();
+            const telefoneValue = document.getElementById('telefone').value.trim();
+            const cepValue = document.getElementById('cep').value.trim();
+            const enderecoValue = document.getElementById('endereco').value.trim();
+            const numeroValue = document.getElementById('numero').value.trim();
+            const bairroValue = document.getElementById('bairro').value.trim();
+            const cidadeValue = document.getElementById('cidade').value.trim();
+            const estadoValue = document.getElementById('estado').value.trim();
+
+            let erro = false;
+
+            if (!nomeValue) {
+                alert('Por favor, insira seu nome completo.');
+                erro = true;
+            }
+            if (!emailValue) {
+                alert('Por favor, insira um e-mail.');
+                erro = true;
+            } else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(emailValue)) {
+                alert('O e-mail inserido não é válido. Por favor, verifique se o e-mail está no formato correto (ex: exemplo@dominio.com).');
+                erro = true;
+            }
+            if (!telefoneValue) {
+                alert('Por favor, insira seu telefone.');
+                erro = true;
+            }
+            if (!cepValue) {
+                alert('Por favor, insira seu CEP.');
+                erro = true;
+            }
+            if (!enderecoValue) {
+                alert('Por favor, insira seu endereço.');
+                erro = true;
+            }
+            if (!numeroValue) {
+                alert('Por favor, insira seu número.');
+                erro = true;
+            }
+            if (!bairroValue) {
+                alert('Por favor, insira seu bairro.');
+                erro = true;
+            }
+            if (!cidadeValue) {
+                alert('Por favor, insira sua cidade.');
+                erro = true;
+            }
+            if (!estadoValue || estadoValue === '') {
+                alert('Por favor, selecione seu estado.');
+                erro = true;
+            }
+
+            if (!erro) {
+                alert('Pedido enviado com sucesso!');
+                this.submit();
+            }
+        });
+    </script>
+</body>
+
+</html>
